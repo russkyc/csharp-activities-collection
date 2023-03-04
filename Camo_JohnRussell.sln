@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreetingApp", "GreetingApp\GreetingApp.csproj", "{B36F28D4-13A9-47EA-BC8C-B3D4AB77F58E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypesApp", "DataTypesApp\DataTypesApp.csproj", "{6E978F65-B2BF-447B-8F29-38355289CAA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B36F28D4-13A9-47EA-BC8C-B3D4AB77F58E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B36F28D4-13A9-47EA-BC8C-B3D4AB77F58E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B36F28D4-13A9-47EA-BC8C-B3D4AB77F58E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B36F28D4-13A9-47EA-BC8C-B3D4AB77F58E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E978F65-B2BF-447B-8F29-38355289CAA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E978F65-B2BF-447B-8F29-38355289CAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E978F65-B2BF-447B-8F29-38355289CAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E978F65-B2BF-447B-8F29-38355289CAA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
