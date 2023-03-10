@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComputerAverageApp", "Compu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypeApp", "DataTypeApp\DataTypeApp.csproj", "{C8E6ED38-F5CC-4869-84B6-94AF3DFBFC18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathApp", "MathApp\MathApp.csproj", "{89A32935-BEAD-41EA-81B7-6009F4DE2117}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{C8E6ED38-F5CC-4869-84B6-94AF3DFBFC18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8E6ED38-F5CC-4869-84B6-94AF3DFBFC18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8E6ED38-F5CC-4869-84B6-94AF3DFBFC18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89A32935-BEAD-41EA-81B7-6009F4DE2117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89A32935-BEAD-41EA-81B7-6009F4DE2117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89A32935-BEAD-41EA-81B7-6009F4DE2117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89A32935-BEAD-41EA-81B7-6009F4DE2117}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
