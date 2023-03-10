@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreetingApp", "GreetingApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypesApp", "DataTypesApp\DataTypesApp.csproj", "{6E978F65-B2BF-447B-8F29-38355289CAA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComputerAverageApp", "ComputerAverageApp\ComputerAverageApp.csproj", "{4135337E-D3F7-44E7-97D8-555BF3598B60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypeApp", "DataTypeApp\DataTypeApp.csproj", "{C8E6ED38-F5CC-4869-84B6-94AF3DFBFC18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{6E978F65-B2BF-447B-8F29-38355289CAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E978F65-B2BF-447B-8F29-38355289CAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E978F65-B2BF-447B-8F29-38355289CAA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4135337E-D3F7-44E7-97D8-555BF3598B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4135337E-D3F7-44E7-97D8-555BF3598B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4135337E-D3F7-44E7-97D8-555BF3598B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4135337E-D3F7-44E7-97D8-555BF3598B60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E6ED38-F5CC-4869-84B6-94AF3DFBFC18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E6ED38-F5CC-4869-84B6-94AF3DFBFC18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E6ED38-F5CC-4869-84B6-94AF3DFBFC18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E6ED38-F5CC-4869-84B6-94AF3DFBFC18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
