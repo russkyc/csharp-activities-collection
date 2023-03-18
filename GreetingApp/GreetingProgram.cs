@@ -22,6 +22,7 @@
 
 // Add Nuget Package: https://www.nuget.org/packages/Russkyc.AttachedUtilities.ConsoleExtensions
 using Russkyc.AttachedUtilities.ConsoleExtensions;
+using Russkyc.AttachedUtilities.ConsoleExtensions.Types;
 
 namespace GreetingApp;
 
@@ -30,9 +31,18 @@ public static class GreetingProgram
     public static void Main()
     {
         new Student(
-            "Enter your name: ".GetString(),
-            "Enter the total number of your enrolled courses: ".GetInt(),
-            "Enter the price of your favorite book: ".GetDouble()
+            "Enter your name: "
+                .ToRichOutput()
+                .SetForeground(Foreground.Green)
+                .GetString(),
+            "Enter the total number of your enrolled courses: "
+                .ToRichOutput()
+                .SetForeground(Foreground.Green)
+                .GetInt(),
+            "Enter the price of your favorite book: "
+                .ToRichOutput()
+                .SetForeground(Foreground.Green)
+                .GetDouble()
         ).GetInfo();
     }
 }

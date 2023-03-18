@@ -30,8 +30,12 @@ public static class DataTypesProgram
     public static void Main()
     {
         var apple = new Apple();
-        apple.SetQuantity("Enter the pieces of apple: ".GetInt());
-        apple.SetPrice($"Enter the price of {apple.Quantity} apples: ".GetDouble());
+        apple.SetQuantity("Enter the pieces of apple: "
+            .ToRichOutput()
+            .GetInt());
+        apple.SetPrice($"Enter the price of {apple.Quantity} apples: "
+            .ToRichOutput()
+            .GetDouble());
         apple.GetValue();
     }
 }

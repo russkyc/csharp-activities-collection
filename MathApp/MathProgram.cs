@@ -37,21 +37,47 @@ public static class MathProgram
             var methods = typeof(MathProgram).GetMethods();
             methods.ToList()
                 .ForEach(
-                    f =>
-                    {
+                    f => {
                         if (f.ReturnType == typeof(double)) Console.WriteLine($"{f.Name[3]} - {f.Name}");
                     });
-            var selection = "Enter Selection: ".ToRichOutput().GetString();
-            if (string.Equals(selection,"S", StringComparison.InvariantCultureIgnoreCase)) Console.WriteLine(GetSquareRoot("Enter num: ".ToRichOutput().GetInt()));
-            if (string.Equals(selection,"P", StringComparison.InvariantCultureIgnoreCase)) Console.WriteLine(GetPower("Enter num1: ".ToRichOutput().GetInt(), "Enter num2: ".ToRichOutput().GetInt()));
-            if (string.Equals(selection,"R", StringComparison.InvariantCultureIgnoreCase)) Console.WriteLine(GetRounded("Enter num: ".ToRichOutput().GetDouble()));
-            if (string.Equals(selection,"B", StringComparison.InvariantCultureIgnoreCase)) Console.WriteLine(GetBitIncrement("Enter num: ".ToRichOutput().GetInt()));
-            if (string.Equals(selection,"M", StringComparison.InvariantCultureIgnoreCase)) Console.WriteLine(GetMax("Enter num1: ".ToRichOutput().GetInt(), "Enter num2: ".ToRichOutput().GetInt()));
+            var selection = "Enter Selection: "
+                .ToRichOutput()
+                .GetString();
+            
+            if (string.Equals(selection,"S", StringComparison.InvariantCultureIgnoreCase)) 
+                Console.WriteLine(GetSquareRoot("Enter num: "
+                    .ToRichOutput()
+                    .GetInt()));
+            
+            if (string.Equals(selection,"P", StringComparison.InvariantCultureIgnoreCase))
+                Console.WriteLine(GetPower("Enter num1: "
+                    .ToRichOutput()
+                    .GetInt(), "Enter num2: "
+                    .ToRichOutput()
+                    .GetInt()));
+            
+            if (string.Equals(selection,"R", StringComparison.InvariantCultureIgnoreCase)) 
+                Console.WriteLine(GetRounded("Enter num: "
+                    .ToRichOutput()
+                    .GetDouble()));
+            
+            if (string.Equals(selection,"B", StringComparison.InvariantCultureIgnoreCase)) 
+                Console.WriteLine(GetBitIncrement("Enter num: "
+                    .ToRichOutput()
+                    .GetInt()));
+            
+            if (string.Equals(selection,"M", StringComparison.InvariantCultureIgnoreCase))
+                Console.WriteLine(GetMax("Enter num1: "
+                    .ToRichOutput()
+                    .GetInt(), "Enter num2: "
+                    .ToRichOutput()
+                    .GetInt()));
         }
     }
-    public static double GetSquareRoot(int num) => Math.Sqrt(num);
-    public static double GetPower(int num, int power) => Math.Pow(num, power);
-    public static double GetRounded(double num) => Math.Round(num);
-    public static double GetBitIncrement(int num) => Math.BitIncrement(num);
-    public static double GetMax(int num1, int num2) => Math.Max(num1, num2);
+
+    private static double GetSquareRoot(int num) => Math.Sqrt(num);
+    private static double GetPower(int num, int power) => Math.Pow(num, power);
+    private static double GetRounded(double num) => Math.Round(num);
+    private static double GetBitIncrement(int num) => Math.BitIncrement(num);
+    private static double GetMax(int num1, int num2) => Math.Max(num1, num2);
 }
