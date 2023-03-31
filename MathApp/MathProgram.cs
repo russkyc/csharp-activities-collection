@@ -34,8 +34,9 @@ public static class MathProgram
     {
         while (true)
         {
-            var methods = typeof(MathProgram).GetMethods();
-            methods.ToList()
+            typeof(MathProgram)
+                .GetMethods()
+                .ToList()
                 .ForEach(
                     f => {
                         if (f.ReturnType == typeof(double)) Console.WriteLine($"{f.Name[3]} - {f.Name}");
