@@ -1,0 +1,101 @@
+﻿<Window x:Class="StudentGradeApplication.Views.StudentGradeProgramView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="StudentGradeProgramView"
+        Width="450"
+        ResizeMode="NoResize"
+        SizeToContent="Height"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <Window.Resources />
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="55" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0"
+               Grid.Column="0"
+               Content="Name: " />
+        <TextBox Grid.Row="0"
+                 Grid.Column="1"
+                 Margin="0,0,0,7"
+                 Style="{DynamicResource PrimaryTextBox}"
+                 Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" />
+
+        <Label Grid.Row="2"
+               Grid.Column="0"
+               Content="English: " />
+        <TextBox Grid.Row="2"
+                 Grid.Column="1"
+                 Margin="0,0,0,7"
+                 Style="{DynamicResource PrimaryTextBox}"
+                 Text="{Binding Path=SubGrade1, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" />
+
+        <Label Grid.Row="3"
+               Grid.Column="0"
+               Content="Math: " />
+        <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 Margin="0,0,0,7"
+                 Style="{DynamicResource PrimaryTextBox}"
+                 Text="{Binding Path=SubGrade2, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" />
+
+        <Label Grid.Row="4"
+               Grid.Column="0"
+               Content="Science: " />
+        <TextBox Grid.Row="4"
+                 Grid.Column="1"
+                 Margin="0,0,0,7"
+                 Style="{DynamicResource PrimaryTextBox}"
+                 Text="{Binding Path=SubGrade3, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" />
+
+        <Label Grid.Row="5"
+               Grid.Column="0"
+               Content="Filipino: " />
+        <TextBox Grid.Row="5"
+                 Grid.Column="1"
+                 Margin="0,0,0,7"
+                 Style="{DynamicResource PrimaryTextBox}"
+                 Text="{Binding Path=SubGrade4, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" />
+
+        <Label Grid.Row="6"
+               Grid.Column="0"
+               Content="History: " />
+        <TextBox Grid.Row="6"
+                 Grid.Column="1"
+                 Style="{DynamicResource PrimaryTextBox}"
+                 Text="{Binding Path=SubGrade5, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" />
+
+        <Label Grid.Row="7"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               Margin="0,10"
+               HorizontalContentAlignment="Center"
+               Content="{Binding Path=StatusMessage, UpdateSourceTrigger=PropertyChanged}"
+               FontSize="17" />
+
+        <Button Grid.Row="8"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Background="#046CFF"
+                Command="{Binding Path=CalculateGradeCommand}"
+                Content="Calculate Average"
+                Foreground="#ffffff"
+                Style="{DynamicResource PrimaryButton}" />
+
+    </Grid>
+</Window>
