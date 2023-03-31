@@ -1,0 +1,95 @@
+﻿<Window x:Class="StudentRegistrationApplication.Views.StudentRegistrationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:StudentRegistrationApplication.ViewModels"
+        Title="StudentRegistrationView"
+        Width="450"
+        Height="385"
+        SizeToContent="Height"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"
+               Margin="0,0,0,0"
+               Content="Student Registration"
+               FontSize="18"
+               FontWeight="Medium" />
+        <Label Grid.Row="1" Content="Last Name:" />
+        <TextBox Grid.Row="2"
+                 Style="{DynamicResource PrimaryTextBox}"
+                 Tag="Last Name"
+                 Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" />
+        <Label Grid.Row="3" Content="First Name:" />
+        <TextBox Grid.Row="4"
+                 Style="{DynamicResource PrimaryTextBox}"
+                 Tag="First Name"
+                 Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" />
+        <Label Grid.Row="5" Content="Middle Name:" />
+        <TextBox Grid.Row="6"
+                 Style="{DynamicResource PrimaryTextBox}"
+                 Tag="Middle Name"
+                 Text="{Binding MiddleName, UpdateSourceTrigger=PropertyChanged}" />
+        <StackPanel Grid.Row="7"
+                    Margin="0,10,0,0"
+                    Orientation="Horizontal">
+            <Label Margin="0,0,5,0"
+                   VerticalAlignment="Center"
+                   Content="Gender" />
+            <RadioButton Margin="0,0,5,0"
+                         VerticalAlignment="Center"
+                         Content="Male"
+                         IsChecked="{Binding Male, UpdateSourceTrigger=PropertyChanged}" />
+            <RadioButton Margin="0,0,5,0"
+                         VerticalAlignment="Center"
+                         Content="Female"
+                         IsChecked="{Binding Female, UpdateSourceTrigger=PropertyChanged}" />
+        </StackPanel>
+        <Grid Grid.Row="8" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0"
+                   VerticalAlignment="Center"
+                   Content="Date of Birth*" />
+            <ComboBox Grid.Column="1"
+                      Margin="0,0,5,0"
+                      ItemsSource="{Binding Day, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedIndex="{Binding SelectedDay, UpdateSourceTrigger=PropertyChanged}"
+                      Style="{DynamicResource PrimaryComboBox}" />
+            <ComboBox Grid.Column="2"
+                      Margin="0,0,5,0"
+                      ItemsSource="{Binding Month, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedIndex="{Binding SelectedMonth, UpdateSourceTrigger=PropertyChanged}"
+                      Style="{DynamicResource PrimaryComboBox}" />
+            <ComboBox Grid.Column="3"
+                      ItemsSource="{Binding Year, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedIndex="{Binding SelectedYear, UpdateSourceTrigger=PropertyChanged}"
+                      Style="{DynamicResource PrimaryComboBox}" />
+        </Grid>
+        <Button Grid.Row="9"
+                Height="35"
+                Margin="0,12,0,0"
+                Background="Crimson"
+                Command="{Binding RegisterCommand}"
+                Content="Register Student"
+                Foreground="White"
+                Style="{DynamicResource PrimaryButton}" />
+    </Grid>
+</Window>
