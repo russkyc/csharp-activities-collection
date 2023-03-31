@@ -24,18 +24,19 @@ using System.Reflection;
 
 namespace DataTypeApp;
 
-public static class DataTypeProgram
+public class DataTypeProgram
 {
     public const string CAR = "Hatchback";
     public const double PRICE = 10.99;
     public const int COUNT = 3;
     public const char OPTION = 'a';
     public const bool ANSWER = true;
-    
+
     public static void Main(string[] args)
     {
-        var t = typeof(DataTypeProgram);
-        t.GetFields()
+        new DataTypeProgram()
+            .GetType()
+            .GetFields()
             .ToList()
             .ForEach(prop => Console.WriteLine($"{prop.Name}({prop.FieldType}): {prop.GetValue(prop)}"));
     }
