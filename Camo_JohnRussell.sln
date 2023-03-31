@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypeApp", "DataTypeApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathApp", "MathApp\MathApp.csproj", "{89A32935-BEAD-41EA-81B7-6009F4DE2117}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentGradeApplication", "StudentGradeApplication\StudentGradeApplication.csproj", "{83E12E61-E660-4EF8-8446-B336AEF504EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegistrationApplication", "StudentRegistrationApplication\StudentRegistrationApplication.csproj", "{61CFC6EF-125A-426C-ABC0-45D8D43E5D39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,13 @@ Global
 		{89A32935-BEAD-41EA-81B7-6009F4DE2117}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89A32935-BEAD-41EA-81B7-6009F4DE2117}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89A32935-BEAD-41EA-81B7-6009F4DE2117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E12E61-E660-4EF8-8446-B336AEF504EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E12E61-E660-4EF8-8446-B336AEF504EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E12E61-E660-4EF8-8446-B336AEF504EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E12E61-E660-4EF8-8446-B336AEF504EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61CFC6EF-125A-426C-ABC0-45D8D43E5D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CFC6EF-125A-426C-ABC0-45D8D43E5D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CFC6EF-125A-426C-ABC0-45D8D43E5D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CFC6EF-125A-426C-ABC0-45D8D43E5D39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
