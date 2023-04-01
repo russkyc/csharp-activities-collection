@@ -9,15 +9,11 @@
 
     <ItemGroup>
       <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+      <PackageReference Include="Russkyc.ModernControls.WPF" Version="1.0.5" />
     </ItemGroup>
 
     <ItemGroup>
       <Page Update="Views\StudentRegistrationView.xaml">
-        <Generator>MSBuild:Compile</Generator>
-        <XamlRuntime>Wpf</XamlRuntime>
-        <SubType>Designer</SubType>
-      </Page>
-      <Page Update="Resources\Styles\ControlStyles.xaml">
         <Generator>MSBuild:Compile</Generator>
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>

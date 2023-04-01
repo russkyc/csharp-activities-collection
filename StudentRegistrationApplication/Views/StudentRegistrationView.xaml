@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:moderncontrols="clr-namespace:org.russkyc.moderncontrols;assembly=Russkyc.ModernControls.WPF"
         xmlns:viewModels="clr-namespace:StudentRegistrationApplication.ViewModels"
         Title="StudentRegistrationView"
         Width="450"
@@ -28,35 +29,32 @@
                Content="Student Registration"
                FontSize="18"
                FontWeight="Medium" />
-        <Label Grid.Row="1" Content="Last Name:" />
-        <TextBox Grid.Row="2"
-                 Style="{DynamicResource PrimaryTextBox}"
-                 Tag="Last Name"
-                 Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" />
-        <Label Grid.Row="3" Content="First Name:" />
-        <TextBox Grid.Row="4"
-                 Style="{DynamicResource PrimaryTextBox}"
-                 Tag="First Name"
-                 Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" />
-        <Label Grid.Row="5" Content="Middle Name:" />
-        <TextBox Grid.Row="6"
-                 Style="{DynamicResource PrimaryTextBox}"
-                 Tag="Middle Name"
-                 Text="{Binding MiddleName, UpdateSourceTrigger=PropertyChanged}" />
+        <moderncontrols:ModernTextBox Grid.Row="1"
+                                      Margin="0,10,0,0"
+                                      Placeholder="Last Name"
+                                      Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" />
+        <moderncontrols:ModernTextBox Grid.Row="2"
+                                      Margin="0,10,0,0"
+                                      Placeholder="First Name"
+                                      Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" />
+        <moderncontrols:ModernTextBox Grid.Row="3"
+                                      Margin="0,10,0,0"
+                                      Placeholder="Middle Name"
+                                      Text="{Binding MiddleName, UpdateSourceTrigger=PropertyChanged}" />
         <StackPanel Grid.Row="7"
                     Margin="0,10,0,0"
                     Orientation="Horizontal">
             <Label Margin="0,0,5,0"
                    VerticalAlignment="Center"
                    Content="Gender" />
-            <RadioButton Margin="0,0,5,0"
-                         VerticalAlignment="Center"
-                         Content="Male"
-                         IsChecked="{Binding Male, UpdateSourceTrigger=PropertyChanged}" />
-            <RadioButton Margin="0,0,5,0"
-                         VerticalAlignment="Center"
-                         Content="Female"
-                         IsChecked="{Binding Female, UpdateSourceTrigger=PropertyChanged}" />
+            <moderncontrols:ModernRadio Margin="0,0,5,0"
+                                        VerticalAlignment="Center"
+                                        IsChecked="{Binding Male, UpdateSourceTrigger=PropertyChanged}"
+                                        Text="Male" />
+            <moderncontrols:ModernRadio Margin="0,0,5,0"
+                                        VerticalAlignment="Center"
+                                        IsChecked="{Binding Female, UpdateSourceTrigger=PropertyChanged}"
+                                        Text="Female" />
         </StackPanel>
         <Grid Grid.Row="8" Margin="0,10,0,0">
             <Grid.ColumnDefinitions>
@@ -83,13 +81,14 @@
                       SelectedIndex="{Binding SelectedYear, UpdateSourceTrigger=PropertyChanged}"
                       Style="{DynamicResource PrimaryComboBox}" />
         </Grid>
-        <Button Grid.Row="9"
-                Height="35"
-                Margin="0,12,0,0"
-                Background="Crimson"
-                Command="{Binding RegisterCommand}"
-                Content="Register Student"
-                Foreground="White"
-                Style="{DynamicResource PrimaryButton}" />
+        <moderncontrols:ModernButton Grid.Row="9"
+                                     Margin="0,12,0,0"
+                                     Padding="12"
+                                     HorizontalContentAlignment="Center"
+                                     Background="Crimson"
+                                     Command="{Binding RegisterCommand}"
+                                     Content="Register Student"
+                                     FontWeight="DemiBold"
+                                     Foreground="White" />
     </Grid>
 </Window>
