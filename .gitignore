@@ -1,4 +1,8 @@
-﻿### VisualStudioCode template
+﻿# User Config
+.[Ee]ditorconfig
+*.[Ee]ditorconfig
+
+### VisualStudioCode template
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -396,8 +400,6 @@ node_modules/
 *.dsp
 
 # Visual Studio 6 technical files
-*.ncb
-*.aps
 
 # Visual Studio LightSwitch build output
 **/*.HTMLClient/GeneratedArtifacts
@@ -471,15 +473,9 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 *.code-workspace
 
 # Local History for Visual Studio Code
-.history/
 
 # Windows Installer files from build outputs
 *.cab
@@ -490,4 +486,3 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-
