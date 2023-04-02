@@ -9,7 +9,7 @@
 
     <ItemGroup>
       <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
-      <PackageReference Include="Russkyc.ModernControls.WPF" Version="1.0.5" />
+      <PackageReference Include="Russkyc.ModernControls.WPF" Version="1.1.3" />
     </ItemGroup>
 
     <ItemGroup>

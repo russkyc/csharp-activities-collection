@@ -7,7 +7,6 @@
         xmlns:viewModels="clr-namespace:StudentRegistrationApplication.ViewModels"
         Title="StudentRegistrationView"
         Width="450"
-        Height="385"
         SizeToContent="Height"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
@@ -49,12 +48,12 @@
                    Content="Gender" />
             <moderncontrols:ModernRadio Margin="0,0,5,0"
                                         VerticalAlignment="Center"
-                                        IsChecked="{Binding Male, UpdateSourceTrigger=PropertyChanged}"
-                                        Text="Male" />
+                                        Content="Male"
+                                        IsChecked="{Binding Male, UpdateSourceTrigger=PropertyChanged}" />
             <moderncontrols:ModernRadio Margin="0,0,5,0"
                                         VerticalAlignment="Center"
-                                        IsChecked="{Binding Female, UpdateSourceTrigger=PropertyChanged}"
-                                        Text="Female" />
+                                        Content="Female"
+                                        IsChecked="{Binding Female, UpdateSourceTrigger=PropertyChanged}" />
         </StackPanel>
         <Grid Grid.Row="8" Margin="0,10,0,0">
             <Grid.ColumnDefinitions>
@@ -66,26 +65,22 @@
             <Label Grid.Column="0"
                    VerticalAlignment="Center"
                    Content="Date of Birth*" />
-            <ComboBox Grid.Column="1"
-                      Margin="0,0,5,0"
-                      ItemsSource="{Binding Day, UpdateSourceTrigger=PropertyChanged}"
-                      SelectedIndex="{Binding SelectedDay, UpdateSourceTrigger=PropertyChanged}"
-                      Style="{DynamicResource PrimaryComboBox}" />
-            <ComboBox Grid.Column="2"
-                      Margin="0,0,5,0"
-                      ItemsSource="{Binding Month, UpdateSourceTrigger=PropertyChanged}"
-                      SelectedIndex="{Binding SelectedMonth, UpdateSourceTrigger=PropertyChanged}"
-                      Style="{DynamicResource PrimaryComboBox}" />
-            <ComboBox Grid.Column="3"
-                      ItemsSource="{Binding Year, UpdateSourceTrigger=PropertyChanged}"
-                      SelectedIndex="{Binding SelectedYear, UpdateSourceTrigger=PropertyChanged}"
-                      Style="{DynamicResource PrimaryComboBox}" />
+            <moderncontrols:ModernComboBox Grid.Column="1"
+                                           Margin="0,0,5,0"
+                                           ItemsSource="{Binding Day, UpdateSourceTrigger=PropertyChanged}"
+                                           SelectedIndex="{Binding SelectedDay, UpdateSourceTrigger=PropertyChanged}" />
+            <moderncontrols:ModernComboBox Grid.Column="2"
+                                           Margin="0,0,5,0"
+                                           ItemsSource="{Binding Month, UpdateSourceTrigger=PropertyChanged}"
+                                           SelectedIndex="{Binding SelectedMonth, UpdateSourceTrigger=PropertyChanged}" />
+            <moderncontrols:ModernComboBox Grid.Column="3"
+                                           ItemsSource="{Binding Year, UpdateSourceTrigger=PropertyChanged}"
+                                           SelectedIndex="{Binding SelectedYear, UpdateSourceTrigger=PropertyChanged}" />
         </Grid>
         <moderncontrols:ModernButton Grid.Row="9"
                                      Margin="0,12,0,0"
                                      Padding="12"
                                      HorizontalContentAlignment="Center"
-                                     Background="Crimson"
                                      Command="{Binding RegisterCommand}"
                                      Content="Register Student"
                                      FontWeight="DemiBold"
