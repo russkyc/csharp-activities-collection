@@ -12,7 +12,6 @@ namespace StudentRegistrationApplication
         protected override void OnStartup(StartupEventArgs e)
         {
             InitializeComponent();
-            base.OnStartup(e);
             
             var view = new StudentRegistrationView
             {

@@ -1,17 +1,17 @@
 ﻿// MIT License
-// 
+//
 // Copyright (c) $today.year Russell Camo (Russkyc)
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in all
 // copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -21,6 +21,7 @@
 // SOFTWARE.
 
 using System;
+using System.Collections;
 using System.Collections.ObjectModel;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -31,60 +32,88 @@ namespace StudentRegistrationApplication.ViewModels;
 partial class RegistrationViewModel : ObservableObject
 {
     [ObservableProperty]
-    private string _firstName;
-    
+    private string? _firstName;
+
     [ObservableProperty]
-    private string _middleName;
-    
+    private string? _middleName;
+
     [ObservableProperty]
-    private string _lastName;
-    
+    private string? _lastName;
+
     [ObservableProperty]
     private bool _male;
-    
+
     [ObservableProperty]
     private bool _female;
 
     [ObservableProperty]
-    private ObservableCollection<int> _day;
-    
+    private ObservableCollection<int>? _day;
+
     [ObservableProperty]
-    private ObservableCollection<int> _month;
-    
+    private ObservableCollection<int>? _month;
+
     [ObservableProperty]
-    private ObservableCollection<int> _year;
+    private ObservableCollection<int>? _year;
+
+    [ObservableProperty]
+    private ObservableCollection<string>? _programs;
 
     [ObservableProperty]
     private int _selectedDay;
-    
+
     [ObservableProperty]
     private int _selectedMonth;
-    
+
     [ObservableProperty]
     private int _selectedYear;
 
+    [ObservableProperty]
+    private int _selectedProgram;
+
     public RegistrationViewModel()
     {
-
         SelectedDay = 0;
         SelectedMonth = 0;
         SelectedYear = 0;
+        SelectedProgram = 0;
 
         Day = new ObservableCollection<int>();
         Month = new ObservableCollection<int>();
         Year = new ObservableCollection<int>();
-            
-        for (int i = 1; i <= 30; i++) Day.Add(i);
-        for (int i = 1; i <= 12; i++) Month.Add(i);
-        for (int i = 1900; i <= 2022; i++) Year.Add(i);
+        Programs = new ObservableCollection<string>();
+
+        for (int i = 1; i <= 30; i++)
+            Day.Add(i);
+        for (int i = 1; i <= 12; i++)
+            Month.Add(i);
+        for (int i = 1900; i <= 2022; i++)
+            Year.Add(i);
+
+        foreach (
+            string course in new ArrayList
+            {
+                "Bachelor of Science in Computer Science",
+                "Bachelor of Science in Information Technology",
+                "Bachelor of Science in Information Systems",
+                "Bachelor of Science in Computer Engineering"
+            }
+        )
+            Programs.Add(course);
     }
 
     [RelayCommand]
     void Register()
     {
         var name = $"{FirstName} {MiddleName} {LastName}";
-        var gender = Male ? "Male" : Female ? "Female" : "Prefer Not to Say";
-        var dateOfBirth = $"{Day[SelectedDay]}/{Month[SelectedMonth]}/{Year[SelectedYear]}";
-        MessageBox.Show($"StudentName: {name} {Environment.NewLine}Gender: {gender}{Environment.NewLine}Date of Birth: {dateOfBirth}");
+        var gender = Male
+            ? "Male"
+            : Female
+                ? "Female"
+                : "Prefer Not to Say";
+        var dateOfBirth = $"{Day![SelectedDay]}/{Month![SelectedMonth]}/{Year![SelectedYear]}";
+        var program = Programs![SelectedProgram];
+        MessageBox.Show(
+            $"StudentName: {name} {Environment.NewLine}Gender: {gender}{Environment.NewLine}Date of Birth: {dateOfBirth}{Environment.NewLine}Program: {program}"
+        );
     }
 }
