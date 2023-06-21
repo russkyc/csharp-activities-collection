@@ -1,9 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using EmployeeApplication.EmployeeNamespace;
+using EmployeeApplicationOld.EmployeeNamespace;
 
-namespace EmployeeApplication
+namespace EmployeeApplicationOld
 {
     /// <summary>
     /// Interaction logic for frmEmployeeDatabase.xaml

@@ -5,6 +5,8 @@
         <TargetFramework>net6.0-windows</TargetFramework>
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
+        <AssemblyName>EmployeeApplicationOld</AssemblyName>
+        <RootNamespace>EmployeeApplicationOld</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

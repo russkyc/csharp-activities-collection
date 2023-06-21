@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInfoApplication", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts", "Accounts\Accounts.csproj", "{C85FFC9A-E750-4AFB-87AA-E1C2D1CAFDD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeApplication", "EmployeeApplication\EmployeeApplication.csproj", "{802F8BE3-C71A-4B39-889C-F48EB9E61914}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeApplicationOld", "EmployeeApplicationOld\EmployeeApplicationOld.csproj", "{802F8BE3-C71A-4B39-889C-F48EB9E61914}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
