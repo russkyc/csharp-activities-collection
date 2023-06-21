@@ -1,12 +1,13 @@
-﻿<Application x:Class="StudentRegistrationApplication.App"
+﻿<Application x:Class="frmEmployeeDatabase.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:StudentRegistrationApplication">
+             xmlns:local="clr-namespace:frmEmployeeDatabase"
+             StartupUri="frmEmployeeDatabase.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/Russkyc.ModernControls.WPF;component/Themes/BaseThemes/Light.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/Russkyc.ModernControls.WPF;component/Themes/ColorThemes/Red.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Russkyc.ModernControls.WPF;component/Themes/BaseThemes/light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Russkyc.ModernControls.WPF;component/Themes/ColorThemes/Gray.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/Russkyc.ModernControls.WPF;component/Themes/Generic.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

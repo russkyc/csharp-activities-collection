@@ -1,6 +1,6 @@
 ﻿// MIT License
 //
-// Copyright (c) $today.year Russell Camo (Russkyc)
+// Copyright (c) 2023 Russell Camo (Russkyc)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,15 +20,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-using System;
-using System.Collections;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using System.Windows;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using Microsoft.Win32;
+namespace StudentNamespace;
 
-namespace StudentRegistrationApplication.ViewModels;
+public class StudentInfo
+{
+    public readonly string StudentId;
+    public readonly string LastName;
+    public readonly string FirstName;
 
-
+    public StudentInfo(string studentId, string lastName, string firstName)
+    {
+        StudentId = studentId;
+        LastName = lastName;
+        FirstName = firstName;
+    }
+}

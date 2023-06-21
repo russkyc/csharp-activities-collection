@@ -1,6 +1,6 @@
 ﻿// MIT License
 //
-// Copyright (c) $today.year Russell Camo (Russkyc)
+// Copyright (c) 2023 Russell Camo (Russkyc)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,14 +21,30 @@
 // SOFTWARE.
 
 using System;
-using System.Collections;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using System.Windows;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using Microsoft.Win32;
 
-namespace StudentRegistrationApplication.ViewModels;
+namespace EmployeeApplication.EmployeeNamespace;
 
+public class Employee
+{
+    public int Id { get; }
+    public string? FirstName { get; }
+    public string? LastName { get; }
+    public string? Position { get; }
 
+    public Employee() { }
+
+    public Employee(string? firstName, string? lastName, string? position)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        Position = position;
+    }
+
+    public Employee(int id, string? firstName, string? lastName, string? position)
+    {
+        Id = id;
+        FirstName = firstName;
+        LastName = lastName;
+        Position = position;
+    }
+}
